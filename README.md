@@ -1,27 +1,25 @@
-
-
+#tech
+# Simple String Operations Program
 def main():
-    print("Welcome to the Addition and Subtraction Program!")
-    
-    # Get two numbers from the user
-    num1 = float(input("Enter the first number: "))
-    num2 = float(input("Enter the second number: "))
+    # Input a string from the user
+    user_string = input("Enter a string: ")
 
-    # Ask the user what operation to perform
-    print("Choose the operation:")
-    print("1. Addition")
-    print("2. Subtraction")
-    choice = input("Enter 1 or 2: ")
+    # 1. Convert to uppercase
+    print("Uppercase:", user_string.upper())
 
-    # Perform the operation
-    if choice == '1':
-        result = num1 + num2
-        print(f"The result of addition: {num1} + {num2} = {result}")
-    elif choice == '2':
-        result = num1 - num2
-        print(f"The result of subtraction: {num1} - {num2} = {result}")
+    # 2. Convert to lowercase
+    print("Lowercase:", user_string.lower())
+
+    # 3. Reverse the string
+    print("Reversed:", user_string[::-1])
+
+    # 4. Count number of characters
+    print("Length of string:", len(user_string))
+
+    # 5. Check if it is a palindrome
+    if user_string == user_string[::-1]:
+        print("It's a palindrome!")
     else:
-        print("Invalid choice. Please enter 1 or 2.")
+        print("It's not a palindrome.")
 
-# Run the program
 main()
